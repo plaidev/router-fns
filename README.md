@@ -46,12 +46,8 @@ Create a handler which aims to route recieved request to appropriate handler.
 
 ```ts
 import { routingHandler, initHandler } from 'router-fns';
-const handler = routingHandler({
-  '/routeA': handlerA,
-  '/routeB': handlerB
-});
 
-const handler2 = routingHandler({
+const router = routingHandler({
   '/routeA': routingHandler({
     '/subRouteA': handlerA
   }),
