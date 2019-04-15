@@ -7,7 +7,7 @@
   "author": "RyosukeCla <ryosukeclarinet@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "ts-node ./src/index.ts"
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
