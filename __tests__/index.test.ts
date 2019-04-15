@@ -1,8 +1,8 @@
 import { reduceHandlers } from '../src/core';
-import { initHandler, routingHandler } from '../src/route'
+import { initHandler, routingHandler, NotFoundError } from '../src/route'
 import { Handler } from '../src/types';
 
-test("reduceHandlers", () => {
+test("should reduceHandlers work", () => {
   const called: any[] = []
   const handler1: Handler = (req, res, next) => {
     called.push(1)
@@ -24,7 +24,7 @@ test("reduceHandlers", () => {
   expect(called).toStrictEqual([1, 2, 3, 4])
 });
 
-test("initHandler", () => {
+test("should initHandler work", () => {
   let _req: any
   const substituteHandler: Handler = (req, res, next) => {
     _req = req
@@ -43,7 +43,7 @@ test("initHandler", () => {
   })
 });
 
-test("routingHandler", () => {
+test("should routingHandler work", () => {
   const testRoute = (url: string) => {
     const called: string[] = []
     const a: Handler = (req, res, next) => {
@@ -73,4 +73,19 @@ test("routingHandler", () => {
   testRoute('/a')
   testRoute('/b/a')
   testRoute('/b/b')
+});
+
+test("should routingHandler throw error", () => {
+  const a: Handler = (req, res, next) => {
+    next()
+  }
+  const router = routingHandler({
+    '/a': a,
+  })
+  const handler = reduceHandlers(initHandler, router)
+  expect(() => {
+    handler({ url: '/b' }, {}, (e) => {
+      if (e) throw e
+    })
+  }).toThrowError(new NotFoundError('/b'))
 });

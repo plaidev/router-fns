@@ -1,5 +1,11 @@
 import { Handler, Routes, RouteRequest } from './types'
 
+export class NotFoundError extends Error {
+  constructor(url: string) {
+    super(`Couldn't find route: ${url}`)
+  }
+}
+
 export const initHandler: Handler = function(req, res, next)  {
   try {
     const splitUrls = (req as RouteRequest).url.split('/').filter(url => url !== '')
@@ -27,7 +33,7 @@ export function routingHandler(routes: Routes): Handler {
     if (handler) {
       return handler(req, res, next)
     } else {
-      return next(new Error(`couldn't find route: ${req.url}`))
+      return next(new NotFoundError(req.url))
     }
   }
 }
