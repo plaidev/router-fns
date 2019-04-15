@@ -7,7 +7,10 @@
   "author": "RyosukeCla <ryosukeclarinet@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run build:es5 && npm run build:esm",
+    "build:es5": "tsc -p build/tsconfig.es5.json",
+    "build:esm": "tsc -p build/tsconfig.esm.json"
   },
   "husky": {
     "hooks": {
