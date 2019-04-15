@@ -33,7 +33,7 @@ const handler = reduceHandlers(handlerA, handlerB, handlerC);
 
 ### initHandler
 
-A handler which initializes request object for routing. It is required to called before routing.
+A handler which initializes request object for routing. It is required to be called before routing.
 
 ```ts
 import { reduceHandlers, initHandler } from 'router-fns';
