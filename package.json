@@ -1,6 +1,7 @@
 {
   "name": "hyper-rpc",
   "version": "1.0.0",
+  "description": "All you need is handler",
   "main": "index.js",
   "repository": "git@github.com:plaidev/hyper-rpc.git",
   "author": "RyosukeCla <ryosukeclarinet@gmail.com>",
@@ -10,7 +11,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/socket.io": "2.1.2",
+    "@types/jest": "24.0.11",
+    "jest": "24.7.1",
+    "ts-jest": "24.0.2",
     "ts-node": "8.0.3",
     "typescript": "3.4.3"
   }
