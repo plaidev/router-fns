@@ -1,5 +1,8 @@
 export interface Request {
-  test: string
+  url: string,
+  _splitUrls: string[],
+  _splitUrlsCursor: number,
+  _splitUrlsLength: number,
 }
 
 export interface Response {
@@ -11,5 +14,5 @@ export interface Handler {
 }
 
 export interface Routes {
-  [key: string]: Handler | Routes
+  [path: string]: Handler
 }

@@ -1,21 +1,5 @@
 import { Handler, Routes } from './types'
 
-/**
- * Reduce multiple handlers into one handler.
- * This reducer is designed to implement middleware pattern.
- */
-export function reduceHandlers(...handlers: Handler[]): Handler {
-  return handlers.reduce((a, b) => {
-    return (req, res, next) => {
-      const _next = <E extends Error>(err?: E) => {
-        if (err) throw err
-        return b(req, res, next)
-      }
-      return a(req, res, _next)
-    }
-  })
-}
-
 export const initHandler: Handler = function(req, res, next)  {
   try {
     const splitUrls = req.url.split('/').filter(url => url !== '')
