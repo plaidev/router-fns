@@ -1,8 +1,8 @@
-# hyper-rpc
+# handler
 
 ## 設計哲学
 
-> 全てはハンドラーである。
+> All you need is handler
 
 ## Utilities
 ### reduceHandlers
