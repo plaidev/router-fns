@@ -1,10 +1,8 @@
-# handler
-
-## 設計哲学
+# router-fns
 
 > All you need is handler
 
-## Utilities
+## usage
 
 ### reduceHandlers
 
@@ -14,9 +12,7 @@
 const handler: Handler = reduceHandlers(handlerA, handlerB, handlerC);
 ```
 
-### Routing
-
-#### initHandler
+### initHandler
 
 ルーティングをするために必要なハンドラー。一番始めに呼ぶ必要がある。
 
@@ -24,7 +20,7 @@ const handler: Handler = reduceHandlers(handlerA, handlerB, handlerC);
 const rootHandler: Handler = reduceHandlers(initHandler, router);
 ```
 
-#### routingHandler
+### routingHandler
 
 ルーティングをするハンドラーを作る関数
 
