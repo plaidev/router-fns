@@ -1,8 +1,6 @@
-# router-fns
+# router-fns : absolutely simple routing libary
 
-Absolutely Simple Routing Library.
-
-> All you need is handler
+Absolutely simple, so that strong. All you need is handler, as with linux's process. It's just that.
 
 ## usage
 
