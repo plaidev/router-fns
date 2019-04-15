@@ -1,8 +1,8 @@
-import { Handler, Routes } from './types'
+import { Handler, Routes, RouteRequest } from './types'
 
 export const initHandler: Handler = function(req, res, next)  {
   try {
-    const splitUrls = req.url.split('/').filter(url => url !== '')
+    const splitUrls = (req as RouteRequest).url.split('/').filter(url => url !== '')
     req._splitUrls = splitUrls;
     req._splitUrlsCursor = 0;
     req._splitUrlsLength = splitUrls.length;
