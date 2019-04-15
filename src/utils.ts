@@ -1,4 +1,4 @@
-import { Handler, Routes } from './types'
+import { Handler } from './types'
 
 /**
  * Reduce multiple handlers into one handler.
