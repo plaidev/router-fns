@@ -40,7 +40,7 @@ const rootHandler = reduceHandlers(initHandler, router);
 
 ### routingHandler
 
-Create a handler which aims to route recieved request object to appropriate handler.
+Create a handler which aims to route recieved request to appropriate handler.
 
 ```ts
 import { routingHandler, initHandler } from 'router-fns';
