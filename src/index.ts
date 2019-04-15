@@ -1,4 +1,4 @@
-import { reduceHandlers } from './core'
-import { initHandler, routingHandler } from './route'
+import { reduceHandlers } from './core';
+import { initHandler, routingHandler } from './route';
 
-export { reduceHandlers, initHandler, routingHandler }
+export { reduceHandlers, initHandler, routingHandler };
