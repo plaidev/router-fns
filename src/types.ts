@@ -1,5 +1,5 @@
 export interface Request {
-  url: string,
+  url?: string,
   // _splitUrls: string[];
   // _splitUrlsCursor: number;
   // _splitUrlsLength: number;
