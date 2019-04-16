@@ -1,5 +1,6 @@
+import { reduceHandlers } from '../dist/index.es.js';
+
 test('should require reduceHandler', () => {
-  const { reduceHandlers } = require('../dist/index.js');
   const called = [];
   const a = (req, res, next) => {
     called.push(1);
