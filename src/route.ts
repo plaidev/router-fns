@@ -1,4 +1,4 @@
-import { Handler, Routes, RouteRequest } from './types';
+import { Handler, Routes } from './types';
 
 export class NotFoundError extends Error {
   constructor(url: string) {
@@ -8,7 +8,7 @@ export class NotFoundError extends Error {
 
 export const initHandler: Handler = function(req, res, next) {
   try {
-    const splitUrls = (req as RouteRequest).url.split('/').filter(url => url !== '');
+    const splitUrls = req.url.split('/').filter(url => url !== '');
     req._splitUrls = splitUrls;
     req._splitUrlsCursor = 0;
     req._splitUrlsLength = splitUrls.length;
