@@ -1,8 +1,8 @@
 {
-  "name": "hyper-rpc",
+  "name": "router-fns",
   "version": "1.0.0",
   "description": "All you need is handler",
-  "repository": "git@github.com:plaidev/hyper-rpc.git",
+  "repository": "git@github.com:plaidev/router-fns.git",
   "author": "RyosukeCla <ryosukeclarinet@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
