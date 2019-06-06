@@ -2,7 +2,13 @@
 
 Absolutely simple, so that strong. All you need is handler, as with linux's process. It's just that.
 
-## usage
+## Installation
+
+```
+$ npm i -SE router-fns
+```
+
+## Usage
 
 ### Handler
 
